@@ -9,7 +9,6 @@ const List = () => {
         try {
             axios.delete(`/todos/${id}`)
             .then(res => {
-                console.log(res.data[0])
                 window.location.reload()
             })
         } catch (err) {

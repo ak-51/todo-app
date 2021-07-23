@@ -2,7 +2,6 @@ import axios from "axios"
 import { Fragment, useState } from "react"
 
 const Edit = ({todo}) => {
-    console.log(todo)
     const [description, setDescription] = useState(todo.description)
 
     const editTodo = () => {
@@ -11,7 +10,6 @@ const Edit = ({todo}) => {
                 description: description
             })
             .then(res => {
-                console.log(res.data[0])
                 window.location.reload()
             })
         } catch (err) {
